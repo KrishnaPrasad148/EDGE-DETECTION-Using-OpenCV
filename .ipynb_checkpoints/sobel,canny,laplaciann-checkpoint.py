@@ -1,8 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
 
-image = cv2.imread('archery1.jpg')
-gray=cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+//TYPE THE CODE HERE TO READ THE IMAGE UISNG IMREAD 
+gray=cv2.cvtColor(img,)//CONVERT THE COLOR TO GRAY TO RGB
 gray = cv2.GaussianBlur(gray,(3,3),0)
 
 sobelx = cv2.Sobel(gray,cv2.CV_64F,1,0,ksize=5)
@@ -17,7 +17,7 @@ plt.title("Sobel X axis")
 plt.axis("off")
 plt.show()
 
-sobely = cv2.Sobel(src = gray, ddepth = cv2.CV_64F, dx = 0, dy = 1, ksize = 3)
+sobely = cv2.Sobel()//TYPE THE CODE HERE 
 plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
 plt.imshow(gray)
@@ -35,6 +35,7 @@ plt.subplot(1,2,1)
 plt.imshow(gray)
 plt.title("Original Image")
 plt.axis("off")
+//TYPE THE CODE HERE
 plt.imshow(sobelxy)
 plt.title("Sobel XY axis")
 plt.axis("off")
@@ -47,7 +48,7 @@ plt.imshow(gray)
 plt.title("Original Image")
 plt.axis("off")
 plt.subplot(1,2,2)
-plt.imshow(lap)
+//DISPLAY THE IMAGE USING IMSHOW 
 plt.title("Laplacian Edge Detector")
 plt.axis("off")
 plt.show()
@@ -60,6 +61,6 @@ plt.title("Original Image")
 plt.axis("off")
 plt.subplot(1,2,2)
 plt.imshow(canny)
-plt.title('Canny Edge Map')
+//PROVIDE THE TITLE OF THE IMAGE DISPLAYED PAGE
 plt.axis("off")
 plt.show()
